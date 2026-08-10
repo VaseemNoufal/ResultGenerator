@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model 01 — Result Poster Maker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="top-brand" href="dashboard.html"><span class="brand-mark small">RP</span> Result Poster Maker</a>
+    <div class="top-actions">
+      <a class="ghost-btn" href="dashboard.html">← Dashboard</a>
+      <button id="logoutBtn" class="ghost-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="editor-layout">
+    <aside class="editor-panel">
+      <div class="panel-heading">
+        <span class="eyebrow">MODEL 01</span>
+        <h1>Floral Result</h1>
+        <p class="muted">Enter the program and prize details. The preview updates instantly.</p>
+      </div>
+
+      <form id="posterForm" class="editor-form">
+        <label>
+          Program name
+          <input id="programName" type="text" placeholder="e.g. Annual Arts Fest 2026" maxlength="42">
+        </label>
+
+        <div class="section-label">Prize details</div>
+
+        <label>
+          <span class="input-title"><i class="dot green"></i> 1st Prize</span>
+          <input id="firstPrize" type="text" placeholder="e.g. Winner">
+        </label>
+
+        <label>
+          <span class="input-title"><i class="dot orange"></i> 2nd Prize</span>
+          <input id="secondPrize" type="text" placeholder="e.g. Runner Up">
+        </label>
+
+        <label>
+          <span class="input-title"><i class="dot red"></i> 3rd Prize</span>
+          <input id="thirdPrize" type="text" placeholder="e.g. Third Place">
+        </label>
+
+        <div class="button-row">
+          <button type="button" class="secondary-btn" id="resetBtn">Reset</button>
+          <button type="button" class="primary-btn" id="downloadBtn">Download PNG <span>↓</span></button>
+        </div>
+      </form>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Keep prize text short for the cleanest result. You can change the positioning later in <code>js/editor.js</code>.
+      </div>
+    </aside>
+
+    <section class="preview-area">
+      <div class="preview-header">
+        <div><span class="eyebrow">LIVE PREVIEW</span><h2>Poster</h2></div>
+        <span class="status-dot">● Live</span>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="posterCanvas" width="1254" height="1254"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/editor.js?v=2"></script>
+  <script>
+    protectPage();
+    document.getElementById("logoutBtn").addEventListener("click", logout);
+  </script>
+</body>
+</html>

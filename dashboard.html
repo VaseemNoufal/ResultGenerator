@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Result Poster Maker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="top-brand" href="dashboard.html"><span class="brand-mark small">RP</span> Result Poster Maker</a>
+    <button id="logoutBtn" class="ghost-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <div class="page-heading">
+      <div>
+        <span class="eyebrow">DASHBOARD</span>
+        <h1>Choose a poster model</h1>
+        <p class="muted">Select a design to start creating your result poster.</p>
+      </div>
+    </div>
+
+    <section class="model-grid">
+      <article class="model-card active" data-model="1">
+        <div class="model-preview">
+          <img src="assets/poster-model-1.png" alt="Poster model 1">
+          <span class="available-badge">Available</span>
+        </div>
+        <div class="model-info">
+          <div>
+            <span class="model-number">MODEL 01</span>
+            <h2>Floral Result</h2>
+          </div>
+          <button class="icon-btn" onclick="openModel(1)" aria-label="Open model 1">→</button>
+        </div>
+      </article>
+
+      <article class="model-card disabled">
+        <div class="placeholder-preview"><span>02</span></div>
+        <div class="model-info">
+          <div><span class="model-number">MODEL 02</span><h2>Coming Soon</h2></div>
+          <span class="locked">Locked</span>
+        </div>
+      </article>
+
+      <article class="model-card disabled">
+        <div class="placeholder-preview"><span>03</span></div>
+        <div class="model-info">
+          <div><span class="model-number">MODEL 03</span><h2>Coming Soon</h2></div>
+          <span class="locked">Locked</span>
+        </div>
+      </article>
+
+      <article class="model-card disabled">
+        <div class="placeholder-preview"><span>04</span></div>
+        <div class="model-info">
+          <div><span class="model-number">MODEL 04</span><h2>Coming Soon</h2></div>
+          <span class="locked">Locked</span>
+        </div>
+      </article>
+
+      <article class="model-card disabled">
+        <div class="placeholder-preview"><span>05</span></div>
+        <div class="model-info">
+          <div><span class="model-number">MODEL 05</span><h2>Coming Soon</h2></div>
+          <span class="locked">Locked</span>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+  <script>
+    protectPage();
+    document.getElementById("logoutBtn").addEventListener("click", logout);
+    function openModel(model) {
+      if (model === 1) window.location.href = "editor.html";
+    }
+  </script>
+</body>
+</html>
