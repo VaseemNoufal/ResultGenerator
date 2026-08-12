@@ -512,3 +512,25 @@ canvas {
     padding: 30px 24px;
   }
 }
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 13px;
+  padding: 14px 15px;
+  outline: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+select:focus {
+  border-color: rgba(24, 121, 78, .6);
+  box-shadow: 0 0 0 4px rgba(24, 121, 78, .08);
+}
+
+.group-select {
+  margin-top: -2px;
+  padding: 11px 13px;
+  font-size: 12px;
+}

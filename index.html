@@ -6,34 +6,71 @@
   <title>Result Poster Maker — Login</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="auth-page">
+
   <main class="auth-shell">
+
     <section class="auth-card">
+
       <div class="brand-mark">RP</div>
+
       <span class="eyebrow">RESULT POSTER MAKER</span>
+
       <h1>Welcome back.</h1>
-      <p class="muted">Sign in to create and manage your result posters.</p>
+
+      <p class="muted">
+        Sign in to create and manage your result posters.
+      </p>
 
       <form id="loginForm" class="form-stack">
+
         <label>
           Username
-          <input id="username" type="text" placeholder="Enter username" autocomplete="username" required>
+
+          <input
+            id="username"
+            type="text"
+            placeholder="Enter username"
+            autocomplete="username"
+            required
+          >
         </label>
 
         <label>
           Password
-          <input id="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            required
+          >
         </label>
 
-        <button class="primary-btn" type="submit">Login <span>→</span></button>
-        <p id="loginMessage" class="form-message" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">
+          Login <span>→</span>
+        </button>
+
+        <p
+          id="loginMessage"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
       </form>
 
       <div class="auth-note">
-        <span>●</span> Frontend-only demo · credentials are stored in JavaScript
+        <span>●</span>
+        Frontend-only demo · credentials are stored in JavaScript
       </div>
+
     </section>
+
   </main>
+
   <script src="js/auth.js"></script>
+
 </body>
 </html>
