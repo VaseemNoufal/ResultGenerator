@@ -186,7 +186,7 @@ const POSITIONS = {
 */
 
 background.src =
-  "assets/poster-model-2.png";
+  "assets/poster-model-1.png";
 
 
 

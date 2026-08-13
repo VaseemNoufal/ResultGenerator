@@ -534,3 +534,24 @@ select:focus {
   padding: 11px 13px;
   font-size: 12px;
 }
+.whatsapp-btn {
+  border: none;
+  border-radius: 13px;
+  padding: 14px 18px;
+  background: #25D366;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+.whatsapp-btn span {
+  margin-left: 6px;
+}
