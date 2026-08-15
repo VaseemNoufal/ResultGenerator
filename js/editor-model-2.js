@@ -76,104 +76,106 @@ const POSITIONS = {
 
   program: {
 
-    x: 155,
+    x: canvas.width / 2,
 
     y: 550,
 
     maxWidth: 560,
 
-    fontSize: 81
+    fontSize: 83,
+    align: "center"
 
   },
 
 
   category: {
 
-    x: 165,
+    x: canvas.width / 2,
 
-    y: 600,
+    y: 605,
 
     maxWidth: 560,
 
-    fontSize: 29
+    fontSize: 32,
+    align: "center"
 
   },
 
 
   first: {
 
-    x: 205,
+    x: 420,
 
-    y: 730,
+    y: 790,
 
     maxWidth: 560,
 
-    fontSize: 38
+    fontSize: 54
 
   },
 
 
   firstGroup: {
 
-    x: 205,
+    x: 420,
 
-    y: 760,
+    y: 831,
 
     maxWidth: 560,
 
-    fontSize: 20
+    fontSize: 33
 
   },
 
 
   second: {
 
-    x: 205,
+    x: 420,
 
-    y: 830,
+    y: 925,
 
     maxWidth: 560,
 
-    fontSize: 38
+    fontSize: 54
 
   },
 
 
   secondGroup: {
 
-    x: 205,
+    x: 420,
 
-    y: 860,
+    y: 966,
 
     maxWidth: 560,
 
-    fontSize: 20
+    fontSize: 33
 
   },
 
 
   third: {
 
-    x: 205,
+    x: 420,
 
-    y: 935,
+    y: 1060,
 
     maxWidth: 560,
 
-    fontSize: 38
+    fontSize: 54
 
   },
 
 
   thirdGroup: {
 
-    x: 205,
+    x: 420,
 
-    y: 965,
+    y: 1101,
 
     maxWidth: 560,
 
-    fontSize: 20
+    fontSize: 33
 
   }
 
@@ -231,7 +233,7 @@ function drawText(
 
 
   ctx.textAlign =
-    "left";
+    position.align || "left";
 
 
   ctx.fillStyle =
@@ -370,7 +372,7 @@ function drawPoster() {
 
     POSITIONS.program,
 
-    "#263238"
+    "#ffffff"
 
   );
 
@@ -392,7 +394,7 @@ function drawPoster() {
 
     POSITIONS.category,
 
-    "#5f686d"
+    "#ebe9e9"
 
   );
 
@@ -408,7 +410,7 @@ function drawPoster() {
 
     POSITIONS.first,
 
-    "#263238"
+    "#518771"
 
   );
 
@@ -446,7 +448,7 @@ function drawPoster() {
 
     POSITIONS.second,
 
-    "#263238"
+    "#518771"
 
   );
 
@@ -480,7 +482,7 @@ function drawPoster() {
 
     POSITIONS.third,
 
-    "#263238"
+    "#518771"
 
   );
 

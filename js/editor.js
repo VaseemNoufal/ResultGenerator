@@ -736,13 +736,10 @@ document
 
       
 
-      const message =
-        encodeURIComponent(
-          "Here is the result poster."
-        );
+      
 
       window.open(
-        `https://wa.me/?text=${message}`,
+        "https://wa.me/",
         "_blank"
       );
 
