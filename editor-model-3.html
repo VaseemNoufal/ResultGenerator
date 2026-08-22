@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Model 01 — Result Poster Maker</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+      <a class="top-brand" href="dashboard.html">
+        <span class="brand-mark small"> RP </span>
+
+        Result Poster Maker
+      </a>
+
+      <div class="top-actions">
+        <a class="ghost-btn" href="dashboard.html"> ← Dashboard </a>
+
+        <button id="logoutBtn" class="ghost-btn">Logout</button>
+      </div>
+    </header>
+
+    <!-- EDITOR -->
+
+    <main class="editor-layout">
+      <!-- LEFT PANEL -->
+
+      <aside class="editor-panel">
+        <div class="panel-heading">
+          <span class="eyebrow"> MODEL 01 </span>
+
+          <h1>Floral Result</h1>
+
+          <p class="muted">
+            Enter the program and prize details. The preview updates instantly.
+          </p>
+        </div>
+
+        <form id="posterForm" class="editor-form">
+          <!-- PROGRAM -->
+
+          <label>
+            Program name
+
+            <input
+              id="programName"
+              type="text"
+              placeholder="e.g. Annual Arts Fest 2026"
+              maxlength="42"
+            />
+          </label>
+
+          <!-- CATEGORY -->
+
+          <label>
+            Category
+
+            <select id="category">
+              <option value="">Select category</option>
+
+              <option value="Kiddies">Kiddies</option>
+
+              <option value="Sub Junior Boys">Sub Junior Boys</option>
+
+              <option value="Sub Junior Girls">Sub Junior Girls</option>
+
+              <option value="Junior Boys">Junior Boys</option>
+
+              <option value="Junior Girls">Junior Girls</option>
+
+              <option value="Senior Boys">Senior Boys</option>
+
+              <option value="Senior Girls">Senior Girls</option>
+
+              <option value="General">General</option>
+            </select>
+          </label>
+
+          <!-- PRIZE DETAILS -->
+
+          <div class="section-label">Prize details</div>
+
+          <!-- FIRST -->
+
+          <label>
+            <span class="input-title">
+              <i class="dot green"></i>
+
+              1st Prize
+            </span>
+
+            <input id="firstPrize" type="text" placeholder="Student name" />
+
+            <select id="firstGroup" class="group-select">
+              <option value="">Select group</option>
+
+              <option value="Yakut">Yakut</option>
+
+              <option value="Marjan">Marjan</option>
+            </select>
+          </label>
+
+          <!-- SECOND -->
+
+          <label>
+            <span class="input-title">
+              <i class="dot orange"></i>
+
+              2nd Prize
+            </span>
+
+            <input id="secondPrize" type="text" placeholder="Student name" />
+
+            <select id="secondGroup" class="group-select">
+              <option value="">Select group</option>
+
+              <option value="Yakut">Yakut</option>
+
+              <option value="Marjan">Marjan</option>
+            </select>
+          </label>
+
+          <!-- THIRD -->
+
+          <label>
+            <span class="input-title">
+              <i class="dot red"></i>
+
+              3rd Prize
+            </span>
+
+            <input id="thirdPrize" type="text" placeholder="Student name" />
+
+            <select id="thirdGroup" class="group-select">
+              <option value="">Select group</option>
+
+              <option value="Yakut">Yakut</option>
+
+              <option value="Marjan">Marjan</option>
+            </select>
+          </label>
+
+          <!-- BUTTONS -->
+
+          <!-- <div class="button-row">
+
+          <button
+            type="button"
+            class="secondary-btn"
+            id="resetBtn"
+          >
+            Reset
+          </button>
+
+
+          <button
+            type="button"
+            class="primary-btn"
+            id="downloadBtn"
+          >
+
+            Download PNG
+
+            <span>↓</span>
+
+          </button>
+
+        </div> -->
+          <div class="button-row">
+            <button type="button" class="secondary-btn" id="resetBtn">
+              Reset
+            </button>
+
+            <button type="button" class="primary-btn" id="downloadBtn">
+              Download PNG
+              <span>↓</span>
+            </button>
+
+            <button type="button" class="whatsapp-btn" id="whatsappBtn">
+              Share to WhatsApp
+              <span>↗</span>
+            </button>
+          </div>
+        </form>
+      </aside>
+
+      <!-- RIGHT PREVIEW -->
+
+      <section class="preview-area">
+        <div class="preview-header">
+          <div>
+            <span class="eyebrow"> LIVE PREVIEW </span>
+
+            <h2>Poster</h2>
+          </div>
+
+          <span class="status-dot"> ● Live </span>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="posterCanvas" width="1254" height="1254"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/editor-model-3.js?v=3"></script>
+
+    <script>
+      protectPage();
+
+      document.getElementById("logoutBtn").addEventListener("click", logout);
+    </script>
+  </body>
+</html>

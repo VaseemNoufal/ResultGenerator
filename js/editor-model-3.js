@@ -76,106 +76,104 @@ const POSITIONS = {
 
   program: {
 
-    x: canvas.width / 2,
+    x: 155,
 
     y: 550,
 
     maxWidth: 560,
 
-    fontSize: 83,
-    align: "center"
+    fontSize: 81
 
   },
 
 
   category: {
 
-    x: canvas.width / 2,
+    x: 165,
 
-    y: 605,
+    y: 600,
 
     maxWidth: 560,
 
-    fontSize: 32,
-    align: "center"
+    fontSize: 29
 
   },
 
 
   first: {
 
-    x: 420,
+    x: 205,
 
-    y: 790,
+    y: 700,
 
     maxWidth: 560,
 
-    fontSize: 54
+    fontSize: 38
 
   },
 
 
   firstGroup: {
 
-    x: 420,
+    x: 205,
 
-    y: 831,
+    y: 730,
 
     maxWidth: 560,
 
-    fontSize: 33
+    fontSize: 20
 
   },
 
 
   second: {
 
-    x: 420,
+    x: 205,
 
-    y: 925,
+    y: 800,
 
     maxWidth: 560,
 
-    fontSize: 54
+    fontSize: 38
 
   },
 
 
   secondGroup: {
 
-    x: 420,
+    x: 205,
 
-    y: 966,
+    y: 830,
 
     maxWidth: 560,
 
-    fontSize: 33
+    fontSize: 20
 
   },
 
 
   third: {
 
-    x: 420,
+    x: 205,
 
-    y: 1060,
+    y: 905,
 
     maxWidth: 560,
 
-    fontSize: 54
+    fontSize: 38
 
   },
 
 
   thirdGroup: {
 
-    x: 420,
+    x: 205,
 
-    y: 1101,
+    y: 935,
 
     maxWidth: 560,
 
-    fontSize: 33
+    fontSize: 20
 
   }
 
@@ -188,7 +186,7 @@ const POSITIONS = {
 */
 
 background.src =
-  "assets/poster-model-3.png";
+  "assets/poster-model-5.png";
 
 
 
@@ -233,7 +231,7 @@ function drawText(
 
 
   ctx.textAlign =
-    position.align || "left";
+    "left";
 
 
   ctx.fillStyle =
@@ -372,7 +370,7 @@ function drawPoster() {
 
     POSITIONS.program,
 
-    "#ffffff"
+    "#531f83"
 
   );
 
@@ -394,7 +392,7 @@ function drawPoster() {
 
     POSITIONS.category,
 
-    "#ebe9e9"
+    "#5f686d"
 
   );
 
@@ -410,7 +408,7 @@ function drawPoster() {
 
     POSITIONS.first,
 
-    "#518771"
+    "#531f83"
 
   );
 
@@ -448,7 +446,7 @@ function drawPoster() {
 
     POSITIONS.second,
 
-    "#518771"
+    "#531f83"
 
   );
 
@@ -482,7 +480,7 @@ function drawPoster() {
 
     POSITIONS.third,
 
-    "#518771"
+    "#531f83"
 
   );
 
@@ -738,13 +736,10 @@ document
 
       
 
-      const message =
-        encodeURIComponent(
-          ""
-        );
+      
 
       window.open(
-        `https://wa.me/?text=${message}`,
+        "https://wa.me/",
         "_blank"
       );
 
