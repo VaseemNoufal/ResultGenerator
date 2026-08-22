@@ -96,19 +96,27 @@
 
         <!-- MODEL 03 -->
 
-        <article class="model-card disabled">
-          <div class="placeholder-preview">
-            <span>03</span>
+        <article class="model-card active" data-model="3">
+          <div class="model-preview">
+            <img src="assets/poster-model-5.png" alt="Poster model 1" />
+
+            <span class="available-badge"> Available </span>
           </div>
 
           <div class="model-info">
             <div>
               <span class="model-number"> MODEL 03 </span>
 
-              <h2>Coming Soon</h2>
+              <h2>Floral Result</h2>
             </div>
 
-            <span class="locked"> Locked </span>
+            <button
+              class="icon-btn"
+              onclick="openModel(3)"
+              aria-label="Open model 3"
+            >
+              →
+            </button>
           </div>
         </article>
 
@@ -164,6 +172,10 @@
         
         if (model === 2) {
           window.location.href = "editor-model-2.html";
+        }
+
+        if (model === 3) {
+          window.location.href = "editor-model-3.html";
         }
       }
     </script>
