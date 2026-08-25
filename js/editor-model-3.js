@@ -690,9 +690,9 @@ document
 
           await navigator.share({
 
-            title: "Result Poster",
+            title: "",
 
-            text: "Result Poster",
+            text: "",
 
             files: [file]
 
